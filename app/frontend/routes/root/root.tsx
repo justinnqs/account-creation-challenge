@@ -1,11 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FlowLayout } from '../../reusable-components/flow-layout/flow-layout.tsx';
+import { FlowLayout } from '../../components/layouts/flow-layout/flow-layout.tsx';
+import { GET_PATH } from '../../routes.tsx';
 
 export function Root() {
   return (
     <FlowLayout>
-      <Link to="/signup/account-selection" className="text-xl">
+      <Link to={GET_PATH.account_selection} className="text-xl">
         Get started
       </Link>
     </FlowLayout>

@@ -1,5 +1,7 @@
 import React from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { GET_PATH } from './routes.tsx';
+import { CreateAccount } from './routes/create-account/create-account.tsx';
 import { Root } from './routes/root/root.tsx';
 import { AccountSelection } from './routes/signup/account-selection/account-selection.tsx';
 import { CreateUser } from './routes/signup/create-user/create-user.tsx';
@@ -9,28 +11,32 @@ import { StockRestrictions } from './routes/signup/stock-restrictions/stock-rest
 
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: GET_PATH.root,
     element: <Root />,
   },
   {
-    path: '/signup/account-selection',
+    path: GET_PATH.account_selection,
     element: <AccountSelection />,
   },
   {
-    path: '/signup/create-user',
+    path: GET_PATH.create_user,
     element: <CreateUser />,
   },
   {
-    path: '/signup/joint-access',
+    path: GET_PATH.joint_access,
     element: <JointAccess />,
   },
   {
-    path: '/signup/stock-restrictions',
+    path: GET_PATH.stock_restrictions,
     element: <StockRestrictions />,
   },
   {
-    path: '/signup/deposit',
+    path: GET_PATH.deposit,
     element: <Deposit />,
+  },
+  {
+    path: GET_PATH.create_account,
+    element: <CreateAccount />,
   },
 ]);
 
